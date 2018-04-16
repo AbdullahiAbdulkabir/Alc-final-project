@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h2>Address Book</h2>
+
+	<div class="form-inline text-right">
+	 	<h4 class="">Add contact</h4>
+  <div class="form-group">
+    <input type="text" class="form-control" id="first" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="last" placeholder="Phone Number">
+  </div>
+
+  <div class="form-group">
+   
+    <input type="email" class="form-control" id=email" placeholder="Email">
+  </div>
+  <button type="submit" id="submit" class="btn btn-success">Add</button>
+</div>
+	</header> 	
+	
+	<div id='addressBook' class="container"><h3>People</h3></div>
+
+	<script>
+		var fName=document.getElementById('first');
+		var lName=document.getElementById('last');
+		var contact=document.getElementById('addressBook');
+		var btn=document.getElementById('submit');
+
+		
+		
+		function getCall(uFirst,uLast){
+			this.uFirst=uFirst;
+			this.uLast=uLast;
+			this.getName=function(){
+				return this.uFirst + ' ' + this.uLast;
+			}
+		}
+
+		btn.addEventListener('click',function(){
+
+
+			 var ele=document.createElement('li');
+			 var newBook= new getCall(fName.value,lName.value);
+			 var eleText=document.createTextNode(newBook.getName());
+			 ele.appendChild(eleText);
+			 contact.appendChild(ele);
+	// Create del button element
+    var deleteBtn = document.createElement('button');
+
+    // Add classes to del button
+    deleteBtn.className = 'btn btn-dark btn-sm float-right delete';
+
+    // Append text node
+    deleteBtn.appendChild(document.createTextNode('X'));
+
+    // Append button to li
+    ele.appendChild(deleteBtn);
+
+    ele.appendChild(li);
+
+    // Append li to list
+    contactList.appendChild(a);
+		})
+
+
+
+
+		// Remove and show item
+		function removeShowItem(e) {
+		    // Remove contact when delete button is clicked
+		    if (e.target.classList.contains('delete')) {
+		        // if (confirm('Are You Sure you want to delete this contact?')) {
+		        //     let li = e.target.parentElement.parentElement;
+		            contactList.removeChild(li);
+		        }
+		    }
+
+	</script>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

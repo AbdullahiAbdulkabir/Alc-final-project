@@ -1,0 +1,43 @@
+body{
+	color: #D2D;
+	
+}
+li{
+			list-style: none; 
+			margin-bottom: 12px;
+			/*background: ;*/
+			font-weight: bold;
+			font-family: avenir;
+			font-size: 21px;
+		}
+		header{
+			background-color: black;
+			color: #fff;
+			font-weight: bold;
+			padding: 20px;
+			margin-bottom:30px;
+		}
+		#addressBook{
+			color: black;
+		
+		}
+		#input{
+
+		}
+.container{
+	margin-top: 30px;
+
+}
+.container h2 {
+color:red;
+margin:12px 200px 0px 260px;
+	
+}
+.header ul li{
+	list-style: none;
+	display: inline-block;
+	float:right;
+	margin-left: 12px;
+}
+.header ul li a{
+	text-decoration: none;
